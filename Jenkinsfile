@@ -8,6 +8,7 @@ pipeline {
         stage('SCM') {
             steps {
                 echo 'Hello Clone stage'
+		git branch: 'main',
                 git credentialsId: 'e1829c54-d5e2-4867-bf79-dddf37cc7cf0', url: 'https://github.com/jaswanthBavi/mvn-war.git'
                 }
         }
